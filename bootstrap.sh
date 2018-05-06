@@ -22,6 +22,14 @@ function do_it() {
 	ln -fs $(pwd)/.vimrc $HOME
 	ln -fs $(pwd)/.zshrc $HOME
 	ln -fs $(pwd)/.oh-my-zsh/themes/voxelgrid.zsh-theme $HOME/.oh-my-zsh/themes/
+
+	# Install vundle if needed.
+	if [[ ! -d "$HOME/.vim/bundle/vundle.vim" ]];
+	then
+		mkdir -p ~/.vim/bundle/vundle.vim
+		git clone https://github.com/gmarik/vundle.git \
+			~/.vim/bundle/vundle.vim
+	fi
 }
 
 # Destructive action, warn user
