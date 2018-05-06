@@ -49,3 +49,6 @@ alias reload="exec $SHELL -l"
 
 # ssh into virtual machine
 alias sshvm='ssh sgosselin@sgosselin-Virtualbox.local'
+
+# update vim bundles
+alias vimup='vim +BundleInstall +qall'
