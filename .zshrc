@@ -67,4 +67,7 @@ export PATH=$PATH:$ANDROID_NDK_HOME
 
 # Virtualenv/VirtualenvWrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
