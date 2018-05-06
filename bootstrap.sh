@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# exits if a command failed.
+set -e
+
 function do_it() {
 	# Install oh-my-zsh
 	if [[ ! -d "$HOME/.oh-my-zsh" ]];
