@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+
+# detect which `ls` flavor is in use
+if ls --color >/dev/null 2>&1;
+then
+	colorflag="--color"
+else
+	colorflag="-G"
+fi
+
+# shortcuts
+alias gr="cd ~/Workspace/Repositories/"
+
+# list all files colorized in long format
+alias l="ls -lF ${colorflag}"
+
+# list only directories
+alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+
+# always enable colored `grep` output
+# note: `GREP_OPTIONS="--color=auto"` is deprecated, hence the alias usage.
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# enable aliases to be sudo’ed
+alias sudo='sudo '
+
+# get week number
+alias week='date +%V'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# view http traffic
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# merge pdf files
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# reload the shell (i.e. invoke as a login shell)
+alias reload="exec $SHELL -l"
+
+# ssh into virtual machine
+alias sshvm='ssh sgosselin@sgosselin-Virtualbox.local'
