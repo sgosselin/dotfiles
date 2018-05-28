@@ -55,16 +55,6 @@ fi
 # Set personal aliases.
 source ~/.aliases
 
-# Additional macOS binaries.
-export PATH="/Users/$USER/Workspace/Environment/macos/bin:$PATH"
-
-# Android SDK/NDK.
-export ANDROID_HOME="/Users/$USER/Workspace/SDKs/Android/android-sdk"
-export ANDROID_NDK_HOME="/Users/$USER/Workspace/SDKs/Android/android-ndk-r13b"
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_NDK_HOME
-
 # Virtualenv/VirtualenvWrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
