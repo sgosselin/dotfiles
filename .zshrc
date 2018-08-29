@@ -46,7 +46,8 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $SSH_CONNECTION ]];
+then
 	export EDITOR='vim'
 else
 	export EDITOR='vim'
@@ -58,6 +59,13 @@ source ~/.aliases
 # Virtualenv/VirtualenvWrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]];
+then
 	source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+# Source ROS if installed.
+if [[ -f /opt/ros/melodic/setup.zsh ]];
+then
+	source /opt/ros/melodic/setup.zsh
 fi
