@@ -1,10 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/$HOME/.oh-my-zsh
 
+#################################################
+# oh-my-zsh configuration
+#################################################
+
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="voxelgrid"
 
 # Case-sensitive completion.
@@ -26,45 +27,37 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # stamp shown in the history command output.
 HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(colored-man-pages git)
-
-# User configuration
-
-export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
-export MANPATH="/usr/local/man:$MANPATH"
-
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+# Initialize oh-my-zsh.
+source $ZSH/oh-my-zsh.sh
+
+
+#################################################
+# user configuration
+#################################################
+
+# Add folders to PATH.
+export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# Add folders to MANPATH.
+export MANPATH="/usr/local/man:$MANPATH"
+
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]];
-then
-	export EDITOR='vim'
-else
-	export EDITOR='vim'
-fi
+export EDITOR='vim'
 
-# Set personal aliases.
+# Set-up aliases.
 source ~/.aliases
-
-# Virtualenv/VirtualenvWrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-
-if [[ -f /usr/local/bin/virtualenvwrapper.sh ]];
+if [[ -f "${HOME}/.aliases.work" ]];
 then
-	source /usr/local/bin/virtualenvwrapper.sh
+	source "${HOME}/.aliases.work"
 fi
 
-# Source ROS if installed.
+# Set-up ROS.
 if [[ -f /opt/ros/melodic/setup.zsh ]];
 then
 	source /opt/ros/melodic/setup.zsh
