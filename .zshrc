@@ -41,8 +41,11 @@ source $ZSH/oh-my-zsh.sh
 # user configuration
 #################################################
 
-# Add folders to PATH.
-export PATH="$PATH:/usr/bin:/bin:/usr/sbin:/sbin"
+# Add standard binaries folders to PATH.
+export PATH="${PATH}:/usr/bin:/bin:/usr/sbin:/sbin"
+
+# Add the dotfiles scripts folder to PATH.
+export PATH="${PATH}:$(dirname $(readlink ~/.zshrc))/scripts"
 
 # Add folders to MANPATH.
 export MANPATH="/usr/local/man:$MANPATH"
