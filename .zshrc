@@ -2,6 +2,14 @@
 export ZSH=/$HOME/.oh-my-zsh
 
 #################################################
+# functions
+#################################################
+
+function source_if_exists() {
+	[[ -f "$1" ]] && source "$1"
+}
+
+#################################################
 # oh-my-zsh configuration
 #################################################
 
@@ -54,14 +62,11 @@ export MANPATH="/usr/local/man:$MANPATH"
 export EDITOR='vim'
 
 # Set-up aliases.
-source ~/.aliases
-if [[ -f "${HOME}/.aliases.work" ]];
-then
-	source "${HOME}/.aliases.work"
-fi
+source_if_exists "${HOME}/.aliases"
+source_if_exists "${HOME}/.aliases.work"
 
 # Set-up ROS.
-if [[ -f /opt/ros/melodic/setup.zsh ]];
-then
-	source /opt/ros/melodic/setup.zsh
-fi
+source_if_exists "/opt/ros/melodic/setup.zsh"
+
+# Set-up rust.
+source_if_exists "${HOME}/.cargo/env"
