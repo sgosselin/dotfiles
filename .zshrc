@@ -52,6 +52,9 @@ source $ZSH/oh-my-zsh.sh
 # Add standard binaries folders to PATH.
 export PATH="${PATH}:/usr/bin:/bin:/usr/sbin:/sbin"
 
+# Add shpotify to PATH.
+export PATH="${PATH}:/usr/local/opt/shpotify/bin/"
+
 # Add the dotfiles scripts folder to PATH.
 export PATH="${PATH}:$(dirname $(readlink ~/.zshrc))/scripts"
 
