@@ -58,3 +58,6 @@ alias snext='spotify next'
 alias sprev='spotify prev'
 alias sstop='spotify stop'
 alias splay='spotify play'
+
+# usb
+alias lsusb='system_profiler SPUSBDataType'
