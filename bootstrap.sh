@@ -11,6 +11,13 @@ function do_it() {
 		echo "After installation, please re-run the bootstrap script"
 		echo ""
 
+		which curl >/dev/null
+		if [[ $? -ne 0 ]];
+		then
+			echo "Error, install 'curl' to install oh-my-zsh."
+			exit 1
+		fi
+
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	fi
 
