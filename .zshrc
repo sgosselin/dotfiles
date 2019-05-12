@@ -73,3 +73,12 @@ source_if_exists "/opt/ros/melodic/setup.zsh"
 
 # Set-up rust.
 source_if_exists "${HOME}/.cargo/env"
+
+
+#################################################
+# wls specific user configuration
+#################################################
+if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null;
+then
+	LS_COLORS='ow=01;36;40'
+fi
