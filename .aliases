@@ -53,6 +53,11 @@ alias sshvm='ssh sgosselin@sgosselin-Virtualbox.local'
 # update vim bundles
 alias vimup='vim +BundleInstall +qall'
 
+# dash
+function dash() {
+	open dash://"$1"
+}
+
 # spotify
 alias snext='spotify next'
 alias sprev='spotify prev'
