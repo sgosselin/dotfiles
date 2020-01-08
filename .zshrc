@@ -58,6 +58,9 @@ export PATH="${PATH}:/usr/local/opt/shpotify/bin/"
 # Add the dotfiles scripts folder to PATH.
 export PATH="${PATH}:$(dirname $(readlink ~/.zshrc))/scripts"
 
+# Add the android platform-tools to PATH.
+export PATH="${PATH}:/Users/sgosselin/Workspace/Tools/android/platform-tools"
+
 # Add folders to MANPATH.
 export MANPATH="/usr/local/man:$MANPATH"
 
