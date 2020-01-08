@@ -78,3 +78,15 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+
+" looks needed for delete key support.
+set backspace=indent,eol,start
+
+" spaces for indent
+autocmd Filetype cmake setlocal tabstop=4
+autocmd Filetype cmake setlocal shiftwidth=4
+autocmd Filetype cmake setlocal expandtab
+
+" prevent auto-indent of c++ keyword
+set cindent
+set cinoptions=g-0
