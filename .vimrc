@@ -49,6 +49,7 @@ Bundle 'rust-lang/rust.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'chazy/cscope_maps'
+Bundle 'rizzatti/dash.vim'
 
 " set colorscheme
 syntax on
