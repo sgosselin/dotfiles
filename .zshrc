@@ -59,7 +59,7 @@ export PATH="${PATH}:/usr/local/opt/shpotify/bin/"
 export PATH="${PATH}:$(dirname $(readlink ~/.zshrc))/scripts"
 
 # Add the android platform-tools to PATH.
-export PATH="${PATH}:/Users/sgosselin/Workspace/Tools/android/platform-tools"
+export PATH="${PATH}:/opt/android/platform-tools"
 
 # Add folders to MANPATH.
 export MANPATH="/usr/local/man:$MANPATH"
