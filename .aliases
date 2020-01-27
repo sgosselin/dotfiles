@@ -47,9 +47,6 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
-# ssh into virtual machine
-alias sshvm='ssh sgosselin@sgosselin-Virtualbox.local'
-
 # update vim bundles
 alias vimup='vim +BundleInstall +qall'
 
