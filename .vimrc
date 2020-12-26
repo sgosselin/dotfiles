@@ -50,6 +50,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'chazy/cscope_maps'
 Bundle 'rizzatti/dash.vim'
+Bundle 'Yggdroot/indentLine'
 
 " set colorscheme
 syntax on
